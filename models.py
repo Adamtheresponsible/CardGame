@@ -17,3 +17,5 @@ class Card:
     self.suit = suit
     self.value = value
     self.image = pygame.image.load('image/' + self.suit.name + '-' str(self.value) + '.svg')
+
+#I need to make a deck class
