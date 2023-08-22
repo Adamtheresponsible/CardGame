@@ -18,4 +18,20 @@ class Card:
     self.value = value
     self.image = pygame.image.load('image/' + self.suit.name + '-' str(self.value) + '.svg')
 
-#I need to make a deck class
+class Deck:
+  cards = None
+
+  def __init__(self):
+    self.cards = []
+    for suit in Suits:
+      for value in range(1, 14):
+        self.cards.append(Card(suit, value))
+
+  def shuffle(self):
+    random.shuffle(self.cards)
+
+  def deal(self):
+    return self.cards.pop()
+
+  def length(self):
+    return len(self.cards)
