@@ -26,3 +26,8 @@ class SnapEngine:
     self.currentPlayer = self.player1
     self.state = GameState.PLAYING
 
+  def deal(self):
+    half = self.deck.length() // 2
+    for i in range(0, half):
+      self.player1.draw(self.deck)
+      self.player2.draw(self.deck)
