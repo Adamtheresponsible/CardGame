@@ -37,3 +37,16 @@ class SnapEngine:
       self.currentPlayer == self.player2
     else:
       self.currentPlayer = self.player2
+
+  def winRound(self, player):
+    self.state = GameState.SNAPPING
+    player.hand.extend(self.pile.popAll())
+    self.pile.clear()
+
+  def play(self, key):
+    if key == None
+      return
+
+    if self.state == GameState.ENDED:
+      return
+      
