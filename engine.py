@@ -31,3 +31,9 @@ class SnapEngine:
     for i in range(0, half):
       self.player1.draw(self.deck)
       self.player2.draw(self.deck)
+
+  def switchPlayer(self):
+    if self.currentPlayer == self.player1:
+      self.currentPlayer == self.player2
+    else:
+      self.currentPlayer = self.player2
