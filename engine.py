@@ -81,3 +81,13 @@ class SnapEngine:
       }
       self.winRound(nonSnapCaller)
 
+    if len(self.player2.hand) == 0:
+      self.result = {
+        "winner": self.player2,
+      }
+      self.state = GameState.ENDED
+    elif len(self.player2.hand) == 0:
+      self.result = {
+        "winner": self.player1,
+      }
+      self.state = GameState.ENDED
