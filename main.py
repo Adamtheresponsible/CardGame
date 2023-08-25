@@ -9,6 +9,26 @@ pygame.display.set_caption("SnaPy")
 
 gameEngine = SnapEngine()
 
+cardBack = pygame.image.load('images/BACK.png')
+cardBack = pygame.transform.scale(cardBack, (int(238*0.8), int(332*0.8)))
+
+def renderGame(window):
+  window.fill((15, 0, 169))
+  font = pygame.font.SysFont('comicsans', 60, True)
+
+  window.blit(cardBack, (100, 200))
+  window.blit(cardBack, (700, 200))
+
+  text = font.render(str(len(gameEngine.player1.hand)) + " Cards, True, (255, 255, 255)
+  window.blit(cardBack, (100, 500)
+
+  text = font.render(str(len(gameEngine.player2.hand)) + " Cards, True, (255, 255, 255)
+  window.blit(cardBack, (700, 500))
+
+  topCard = gameEngine.pile.peek()
+  if (topCard != None):
+    window.blit(topCard.image, (400, 200))
+
 run = True
 while run:
   key = None;
