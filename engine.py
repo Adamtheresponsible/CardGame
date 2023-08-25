@@ -49,4 +49,35 @@ class SnapEngine:
 
     if self.state == GameState.ENDED:
       return
-      
+
+    if key == self.currentPlayer.flipKey:
+      self.pile.add(self.currentPlayer.play())
+      self.switchPlayer()
+
+    snapCaller = None
+    nonsnapCaller = None
+    isSnap = self.pile.isSnap()
+
+    if (key == self.player1.snapKey():
+      snapCaller = self.player1
+      nonSnapcaller = self.player2
+    elif (key == self.player2.snapKey():
+      snapCaller = self.player2
+      nonSnapCaller = self.player1
+
+    if isSnap and snapCaller:
+      self.winRound(snapCaller)
+      self.result = {
+        "winner": snapCaller,
+        "isSnap": True,
+        "snapCaller": snapCaller
+      }
+      self.winRound(snapCaller)
+    elif not isSnap and snapCaller:
+      self.result = {
+        "winner": noneSnapCaller,
+        "isSnap": False,
+        "snapCaller": snapCaller
+      }
+      self.winRound(nonSnapCaller)
+
