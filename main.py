@@ -19,10 +19,10 @@ def renderGame(window):
   window.blit(cardBack, (100, 200))
   window.blit(cardBack, (700, 200))
 
-  text = font.render(str(len(gameEngine.player1.hand)) + " Cards, True, (255, 255, 255)
-  window.blit(cardBack, (100, 500)
+  text = font.render(str(len(gameEngine.player1.hand)) + " Cards", True, (255, 255, 255))
+  window.blit(cardBack, (100, 500))
 
-  text = font.render(str(len(gameEngine.player2.hand)) + " Cards, True, (255, 255, 255)
+  text = font.render(str(len(gameEngine.player2.hand)) + " Cards", True, (255, 255, 255))
   window.blit(cardBack, (700, 500))
 
   topCard = gameEngine.pile.peek()
