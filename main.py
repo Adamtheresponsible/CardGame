@@ -1,3 +1,4 @@
+#this file is the entry point to the app
 import pygame
 from models import *
 from engine import *
