@@ -44,7 +44,7 @@ class SnapEngine:
     self.pile.clear()
 
   def play(self, key):
-    if key == None
+    if key == None:
       return
 
     if self.state == GameState.ENDED:
@@ -58,10 +58,10 @@ class SnapEngine:
     nonsnapCaller = None
     isSnap = self.pile.isSnap()
 
-    if (key == self.player1.snapKey():
+    if (key == self.player1.snapKey()):
       snapCaller = self.player1
       nonSnapcaller = self.player2
-    elif (key == self.player2.snapKey():
+    elif (key == self.player2.snapKey()):
       snapCaller = self.player2
       nonSnapCaller = self.player1
 
@@ -75,7 +75,7 @@ class SnapEngine:
       self.winRound(snapCaller)
     elif not isSnap and snapCaller:
       self.result = {
-        "winner": noneSnapCaller,
+        "winner": nonSnapCaller,
         "isSnap": False,
         "snapCaller": snapCaller
       }
