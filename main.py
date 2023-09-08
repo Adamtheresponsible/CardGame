@@ -32,7 +32,7 @@ def renderGame(window):
 
   if gameEngine.state == GameState.PLAYING:
     text = font.render(gameEngine.currentPlayer.name + " to flip", True, (255, 255, 255))
-    window.blit(text, (20, 50)
+    window.blit(text, (20, 50))
 
   if gameEngine.state == GameState.SNAPPING:
     result = gameEngine.result
