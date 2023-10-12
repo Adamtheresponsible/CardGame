@@ -10,3 +10,5 @@ I will use this structure to build other card games in the future. I'm thinking 
 I am typing this is vscode :)
 
 I can now edit these repos on vscode on a Linux system on a virtual machine
+
+need to run this program to test it still..
