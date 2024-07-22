@@ -12,3 +12,5 @@ I am typing this is vscode :)
 I can now edit these repos on vscode on a Linux system on a virtual machine
 
 need to run this program to test it still..
+
+I'm just editing this for the commit because my website updates didn't count for whatever reason
